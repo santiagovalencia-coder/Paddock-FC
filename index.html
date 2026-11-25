@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Paddock FC · Prototipo</title>
+    <meta
+      name="description"
+      content="Paddock FC: análisis de fútbol y Fórmula 1 para aficionados de Venezuela. Informes, cursos y planes desde $2,99 al mes."
+    />
+    <meta name="theme-color" content="#0D0D10" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Inter:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="prog"></div>
+    <div id="intro" role="dialog" aria-label="Introducción">
+      <i style="top: 30%; width: 60vw"></i
+      ><i style="top: 72%; width: 40vw; animation-delay: 0.3s"></i>
+      <div class="lg">
+        <svg width="44" height="50" viewBox="0 0 28 32" aria-hidden="true">
+          <path d="M14 1L26 5.5V16C26 23 21 28 14 31C7 28 2 23 2 16V5.5Z" fill="#E10600" />
+          <path
+            d="M8 13L14 19L20 13"
+            stroke="#C8A24A"
+            stroke-width="3"
+            fill="none"
+            stroke-linecap="round"
+          /></svg
+        >PADDOCK <span class="r">FC</span>
+      </div>
+      <div class="lights" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <small id="ilab">PREPÁRATE</small><button class="skip" type="button">Saltar intro</button>
+    </div>
+    <div id="wipe" aria-hidden="true"></div>
+    <header>
+      <div class="wrap hd">
+        <a class="lg" href="#home" aria-label="Paddock FC, inicio"
+          ><svg width="26" height="30" viewBox="0 0 28 32" aria-hidden="true">
+            <path d="M14 1L26 5.5V16C26 23 21 28 14 31C7 28 2 23 2 16V5.5Z" fill="#E10600" />
+            <path
+              d="M8 13L14 19L20 13"
+              stroke="#C8A24A"
+              stroke-width="3"
+              fill="none"
+              stroke-linecap="round"
+            /></svg
+          >PADDOCK <span class="r">FC</span></a
+        >
+        <nav>
+          <a href="#home">Inicio</a><a href="#catalogo" data-sp="fut">Fútbol</a
+          ><a href="#catalogo" data-sp="f1">F1</a><a href="#catalogo" data-sp="all">Catálogo</a
+          ><a href="#planes">Planes</a>
+        </nav>
+        <div class="row">
+          <button class="ic" data-dr aria-label="Abrir carrito">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2" />
+              <circle cx="10" cy="20" r="1.3" />
+              <circle cx="17" cy="20" r="1.3" /></svg
+            ><span class="ict">Carrito</span> <b id="bd">0</b></button
+          ><a class="btn s" href="#registro">Empieza gratis</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section data-v="home" class="on">
+        <div class="hero">
+          <img data-i="hero" alt="" />
+          <div class="ov"></div>
+          <i class="sl" style="top: 64%; width: 38vw"></i
+          ><i class="sl" style="top: 72%; width: 50vw; animation-delay: 0.9s"></i
+          ><i class="sl" style="top: 80%; width: 30vw; animation-delay: 1.6s"></i>
+          <div class="hc wrap">
+            <div class="k r up">ANÁLISIS DE FÚTBOL Y FÓRMULA 1</div>
+            <h1 class="h up" style="--fs: clamp(54px, 10.5vw, 132px)">
+              Entiende el juego.<br /><span class="r">Domina la carrera.</span>
+            </h1>
+            <p class="mu up">
+              Informes tácticos, cursos y comunidad para los aficionados de Venezuela. Desde $2,99
+              al mes.
+            </p>
+            <div class="row up">
+              <a class="btn" href="#registro">Empieza gratis (7 días)</a
+              ><a class="btn o" href="#planes">Ver planes</a>
+            </div>
+          </div>
+          <div class="cd" aria-label="Próximo informe">
+            <span class="k r live">PRÓXIMO INFORME EN VIVO</span
+            ><span style="font-size: 14px; font-weight: 700"
+              >Gran Premio · Análisis de estrategia</span
+            >
+            <div class="u" id="cdu">
+              <div><b>02</b><span>DÍAS</span></div>
+              <div><b>14</b><span>HORAS</span></div>
+              <div><b>36</b><span>MIN</span></div>
+              <div><b>20</b><span>SEG</span></div>
+            </div>
+          </div>
+          <div class="chk"></div>
+        </div>
+        <div class="mq" aria-hidden="true">
+          <div>
+            <span
+              >Fútbol <i>/</i> Fórmula 1 <i>/</i> Táctica <i>/</i> Estrategia <i>/</i> Datos
+              <i>/</i> Análisis <i>/</i></span
+            ><span
+              >Fútbol <i>/</i> Fórmula 1 <i>/</i> Táctica <i>/</i> Estrategia <i>/</i> Datos
+              <i>/</i> Análisis <i>/</i></span
+            >
+          </div>
+        </div>
+        <section class="wrap sec">
+          <div class="k r rv">EXPLORA POR DEPORTE</div>
+          <h2 class="h rv" style="--fs: clamp(40px, 6vw, 64px)">Elige tu pista</h2>
+          <div class="g3">
+            <a class="card pg rv" href="#catalogo" data-sp="fut"
+              ><div class="im"><img data-i="fut" alt="" /></div>
+              <div class="bd">
+                <h3>Fútbol</h3>
+                <p class="mu">Táctica, presión y espacios explicados partido a partido.</p>
+                <span class="num">01 →</span>
+              </div></a
+            >
+            <a class="card pg rv" href="#catalogo" data-sp="f1"
+              ><div class="im"><img data-i="pit" alt="" /></div>
+              <div class="bd">
+                <h3>Fórmula 1</h3>
+                <p class="mu">
+                  Estrategia, neumáticos y paradas: la carrera leída como un ingeniero.
+                </p>
+                <span class="num">02 →</span>
+              </div></a
+            >
+            <a class="card pg rv" href="#catalogo" data-sp="all"
+              ><div class="im"><img data-i="tr" alt="" /></div>
+              <div class="bd">
+                <h3>Packs</h3>
+                <p class="mu">Temporadas y campeonatos completos en un solo paquete.</p>
+                <span class="num">03 →</span>
+              </div></a
+            >
+          </div>
+        </section>
+        <section class="wrap sec" style="padding-top: 0">
+          <div class="k r rv" style="text-align: center">POR QUÉ PADDOCK FC</div>
+          <h2 class="h rv" style="--fs: clamp(40px, 6vw, 64px); text-align: center">
+            Aficionados con criterio
+          </h2>
+          <div class="why rv">
+            <div>
+              <svg width="44" height="44" viewBox="0 0 24 24">
+                <path
+                  d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"
+                />
+              </svg>
+              <h3>Análisis con criterio</h3>
+              <p class="mu">Táctica y estrategia sin tecnicismos.</p>
+            </div>
+            <div>
+              <svg width="44" height="44" viewBox="0 0 24 24">
+                <path d="M4 20V10M10 20V4M16 20v-8M22 20H2" />
+              </svg>
+              <h3>Datos que se entienden</h3>
+              <p class="mu">Cifras claras para leer cada jornada y cada carrera.</p>
+            </div>
+            <div>
+              <svg width="44" height="44" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="4.5" />
+                <circle cx="12" cy="12" r="1" />
+              </svg>
+              <h3>Aprende a tu ritmo</h3>
+              <p class="mu">Cursos y guías 100% digitales.</p>
+            </div>
+            <div>
+              <svg width="44" height="44" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" />
+              </svg>
+              <h3>Hecho para Venezuela</h3>
+              <p class="mu">Precios en dólares y contenido en español.</p>
+            </div>
+          </div>
+        </section>
+        <div class="band">
+          <div class="wrap stt">
+            <div><b class="cnt" data-to="2">2</b><span>DEPORTES EN UN SOLO LUGAR</span></div>
+            <div><b class="cnt" data-to="7">7</b><span>DÍAS DE PRUEBA GRATIS</span></div>
+            <div>
+              <b class="cnt" data-to="2.99" data-d="2" data-pre="$">$2,99</b
+              ><span>PLAN FAN DESDE</span>
+            </div>
+            <div>
+              <b class="cnt" data-to="100" data-suf="%">100%</b><span>DIGITAL, A TU RITMO</span>
+            </div>
+          </div>
+        </div>
+        <section class="wrap sec" id="planes">
+          <div class="k r rv">SUSCRIPCIONES</div>
+          <h2 class="h rv" style="--fs: clamp(40px, 6vw, 64px)">Elige tu plan</h2>
+          <div class="g3" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))">
+            <div class="card pl rv">
+              <h3 class="h" style="--fs: 40px">Plan Fan</h3>
+              <div class="big">
+                $2,99<small class="mu" style="font-size: 16px; font-weight: 400"> / mes</small>
+              </div>
+              <ul>
+                <li>Análisis semanal de fútbol y F1</li>
+                <li>Resúmenes de cada jornada y Gran Premio</li>
+                <li>7 días de prueba gratis</li>
+              </ul>
+              <button class="btn o w" data-add="7">Añadir al carrito</button>
+            </div>
+            <div class="card pl pro rv">
+              <span class="k">MÁS POPULAR</span>
+              <h3 class="h" style="--fs: 40px">Plan Pro</h3>
+              <div class="big">
+                $5,99<small class="mu" style="font-size: 16px; font-weight: 400"> / mes</small>
+              </div>
+              <ul>
+                <li>Todo lo del Plan Fan</li>
+                <li>Análisis completo por partido y Gran Premio</li>
+                <li>Archivo completo y comunidad</li>
+              </ul>
+              <button class="btn w" data-add="8">Añadir al carrito</button>
+            </div>
+          </div>
+        </section>
+        <section class="sec" style="background: var(--s)">
+          <div class="wrap">
+            <div class="k r rv">CATÁLOGO</div>
+            <h2 class="h rv" style="--fs: clamp(40px, 6vw, 64px)">Lo más visto</h2>
+            <div class="g4" id="feat"></div>
+          </div>
+        </section>
+        <section class="wrap sec">
+          <div class="k r rv">CÓMO FUNCIONA</div>
+          <h2 class="h rv" style="--fs: clamp(40px, 6vw, 64px)">Tres pasos</h2>
+          <div class="g3">
+            <div class="card step rv">
+              <b>01</b>
+              <h3 class="h" style="--fs: 30px">Elige</h3>
+              <p class="mu">Filtra por deporte, tipo y nivel hasta dar con tu análisis.</p>
+            </div>
+            <div class="card step rv">
+              <b>02</b>
+              <h3 class="h" style="--fs: 30px">Prueba gratis</h3>
+              <p class="mu">Activa 7 días del Plan Fan y lee el primer informe.</p>
+            </div>
+            <div class="card step rv">
+              <b>03</b>
+              <h3 class="h" style="--fs: 30px">Aprende</h3>
+              <p class="mu">Cursos y guías a tu ritmo, siempre en tu cuenta.</p>
+            </div>
+          </div>
+        </section>
+        <section class="sec" style="background: var(--s)">
+          <div class="wrap">
+            <div class="k r rv">COMUNIDAD</div>
+            <h2 class="h rv" style="--fs: clamp(40px, 6vw, 64px)">Lo que dicen los aficionados</h2>
+            <div class="g3">
+              <div class="card bd rv">
+                <p>“Por fin entiendo por qué se decidió la carrera en el pit stop.”</p>
+                <span class="k">AFICIONADO DE F1 · CARACAS</span>
+              </div>
+              <div class="card bd rv">
+                <p>“Los informes tácticos me hicieron ver el fútbol distinto.”</p>
+                <span class="k">AFICIONADO AL FÚTBOL · VALENCIA</span>
+              </div>
+              <div class="card bd rv">
+                <p>“Claro, directo y vale cada dólar.”</p>
+                <span class="k">SUSCRIPTOR PLAN PRO · MARACAIBO</span>
+              </div>
+            </div>
+            <p class="mu" style="margin-top: 16px; font-size: 13px">
+              Testimonios de ejemplo para el prototipo.
+            </p>
+          </div>
+        </section>
+        <section class="wrap sec" id="faq" style="max-width: 900px">
+          <div class="k r rv">PREGUNTAS FRECUENTES</div>
+          <h2 class="h rv" style="--fs: clamp(40px, 6vw, 64px)">Antes de empezar</h2>
+          <details>
+            <summary>¿Qué incluye la prueba gratuita?</summary>
+            <p>
+              Siete días del Plan Fan, con los análisis semanales y los resúmenes de cada jornada.
+            </p>
+          </details>
+          <details>
+            <summary>¿Puedo cancelar cuando quiera?</summary>
+            <p>Sí, sin compromiso de permanencia.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se paga?</summary>
+            <p>Los precios son en dólares. La pasarela de pago no hace parte de este prototipo.</p>
+          </details>
+          <details>
+            <summary>¿Los cursos caducan?</summary>
+            <p>No: tienes acceso de por vida desde tu cuenta.</p>
+          </details>
+        </section>
+        <section class="cta">
+          <img data-i="cta" alt="" />
+          <div class="ov"></div>
+          <canvas id="w3d" aria-hidden="true"></canvas>
+          <div class="wrap">
+            <h2 class="h" style="--fs: clamp(48px, 8vw, 88px)">
+              Únete a la próxima<br /><span class="r">temporada.</span>
+            </h2>
+            <p class="mu">7 días de prueba gratis. Cancela cuando quieras.</p>
+            <div><a class="btn" href="#registro">Empieza gratis (7 días)</a></div>
+          </div>
+        </section>
+      </section>
+      <section data-v="registro">
+        <div class="au">
+          <div class="aul">
+            <img data-i="hero" alt="" style="object-position: 75% center" />
+            <div class="ov"></div>
+            <a class="lg" href="#home"
+              ><svg width="26" height="30" viewBox="0 0 28 32" aria-hidden="true">
+                <path d="M14 1L26 5.5V16C26 23 21 28 14 31C7 28 2 23 2 16V5.5Z" fill="#E10600" />
+                <path
+                  d="M8 13L14 19L20 13"
+                  stroke="#C8A24A"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                /></svg
+              >PADDOCK <span class="r">FC</span></a
+            >
+            <h1 class="h up" style="--fs: clamp(44px, 5.6vw, 86px)">
+              Únete a la<br />próxima<br /><span class="r">temporada.</span>
+            </h1>
+            <ul>
+              <li>7 días de prueba gratis</li>
+              <li>Análisis semanal de fútbol y F1</li>
+              <li>Cancela cuando quieras</li>
+            </ul>
+          </div>
+          <form class="auf fi" data-toast="Cuenta creada">
+            <h2 class="h" style="--fs: 56px">Crea tu cuenta</h2>
+            <p class="mu">Empieza tu prueba gratis de 7 días del Plan Fan.</p>
+            <label
+              >Nombre completo<input
+                type="text"
+                required
+                autocomplete="name"
+                placeholder="Tu nombre" /></label
+            ><label
+              >Correo electrónico<input
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="tucorreo@ejemplo.com" /></label
+            ><label class="pw"
+              >Contraseña<input
+                type="password"
+                required
+                minlength="8"
+                autocomplete="new-password"
+                placeholder="Mínimo 8 caracteres"
+              /><button type="button" data-eye aria-label="Mostrar contraseña">Ver</button></label
+            ><label style="display: flex; gap: 10px; align-items: center"
+              ><input type="checkbox" required style="width: auto; accent-color: var(--r)" /> Acepto
+              los términos y la política de privacidad</label
+            ><button class="btn w">Crear cuenta gratis</button>
+            <p class="mu" style="text-align: center">
+              ¿Ya tienes cuenta? <a class="r" href="#acceso">Inicia sesión</a>
+            </p>
+          </form>
+        </div>
+      </section>
+      <section data-v="acceso">
+        <div class="au">
+          <div class="aul">
+            <img data-i="pit" alt="" />
+            <div class="ov"></div>
+            <a class="lg" href="#home"
+              ><svg width="26" height="30" viewBox="0 0 28 32" aria-hidden="true">
+                <path d="M14 1L26 5.5V16C26 23 21 28 14 31C7 28 2 23 2 16V5.5Z" fill="#E10600" />
+                <path
+                  d="M8 13L14 19L20 13"
+                  stroke="#C8A24A"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                /></svg
+              >PADDOCK <span class="r">FC</span></a
+            >
+            <h1 class="h up" style="--fs: clamp(44px, 5.6vw, 86px)">
+              Entiende<br />el juego.<br /><span class="r">Domina la carrera.</span>
+            </h1>
+            <ul>
+              <li>Tus informes y cursos en un solo lugar</li>
+              <li>Retoma tu análisis donde lo dejaste</li>
+            </ul>
+          </div>
+          <form class="auf fi" data-toast="Sesión iniciada">
+            <h2 class="h" style="--fs: 56px">Inicia sesión</h2>
+            <p class="mu">Accede a tus informes, cursos y planes.</p>
+            <label
+              >Correo electrónico<input
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="tucorreo@ejemplo.com" /></label
+            ><label class="pw"
+              >Contraseña<input
+                type="password"
+                required
+                autocomplete="current-password"
+                placeholder="Tu contraseña"
+              /><button type="button" data-eye aria-label="Mostrar contraseña">Ver</button></label
+            >
+            <div class="row" style="justify-content: space-between; font-size: 14px">
+              <label style="display: flex; gap: 8px; align-items: center"
+                ><input type="checkbox" style="width: auto; accent-color: var(--r)" /> Mantener
+                sesión iniciada</label
+              ><a class="mu" href="#acceso" style="text-decoration: underline"
+                >¿Olvidaste tu contraseña?</a
+              >
+            </div>
+            <button class="btn w">Iniciar sesión</button>
+            <p class="mu" style="text-align: center">
+              ¿No tienes cuenta? <a class="r" href="#registro">Regístrate</a>
+            </p>
+          </form>
+        </div>
+      </section>
+      <section data-v="catalogo">
+        <div class="ban">
+          <img data-i="pit" alt="" style="opacity: 0.35" />
+          <div class="wrap">
+            <div class="mu">Inicio / Catálogo</div>
+            <h1 class="h" style="--fs: clamp(52px, 8vw, 88px)">Catálogo</h1>
+            <p class="mu" style="max-width: 520px">
+              Informes, cursos, packs y planes de fútbol y Fórmula 1. Filtra y encuentra tu próximo
+              análisis.
+            </p>
+            <div class="seg" role="tablist" aria-label="Deporte">
+              <button data-seg="all">Todo</button><button data-seg="fut">Fútbol</button
+              ><button data-seg="f1">Fórmula 1</button>
+            </div>
+          </div>
+        </div>
+        <div class="wrap cat">
+          <details class="card" id="fd" open>
+            <summary class="h" style="--fs: 28px">Filtros</summary>
+            <div class="flt" role="group" aria-label="Filtros">
+              <div class="k">DEPORTE</div>
+              <label><input type="checkbox" data-f="sp" value="fut" /> Fútbol</label
+              ><label><input type="checkbox" data-f="sp" value="f1" /> Fórmula 1</label>
+              <div class="k">TIPO</div>
+              <label><input type="checkbox" data-f="ty" value="suscripción" /> Suscripción</label
+              ><label><input type="checkbox" data-f="ty" value="informe" /> Informe</label
+              ><label><input type="checkbox" data-f="ty" value="curso" /> Curso</label
+              ><label><input type="checkbox" data-f="ty" value="pack" /> Pack</label>
+              <div class="k">NIVEL</div>
+              <label><input type="checkbox" data-f="lv" value="básico" /> Básico</label
+              ><label><input type="checkbox" data-f="lv" value="intermedio" /> Intermedio</label
+              ><label><input type="checkbox" data-f="lv" value="avanzado" /> Avanzado</label>
+              <div class="k">PRECIO MÁXIMO <output id="mo">$15,00</output></div>
+              <input
+                type="range"
+                id="mx"
+                min="1"
+                max="15"
+                step=".5"
+                value="15"
+                aria-label="Precio máximo"
+                style="accent-color: var(--r)"
+              /><button class="lk" data-reset>Limpiar filtros</button>
+            </div>
+          </details>
+          <div>
+            <div class="tb">
+              <b id="cnt"></b>
+              <div class="row">
+                <input
+                  type="search"
+                  id="q"
+                  placeholder="Buscar análisis"
+                  aria-label="Buscar"
+                /><select id="o" aria-label="Ordenar">
+                  <option value="pop">Más vistos</option>
+                  <option value="a">Precio: menor a mayor</option>
+                  <option value="d">Precio: mayor a menor</option>
+                </select>
+              </div>
+            </div>
+            <div class="chips" id="chips"></div>
+            <div class="g3" id="grid"></div>
+          </div>
+        </div>
+      </section>
+      <section data-v="detalle">
+        <div class="wrap" id="det" style="padding-top: 32px; padding-bottom: 88px"></div>
+      </section>
+      <section data-v="carrito">
+        <div class="wrap" style="padding-top: 48px; padding-bottom: 96px">
+          <ol class="stp">
+            <li class="on">1 Carrito</li>
+            <li>—</li>
+            <li>2 Resumen</li>
+            <li>—</li>
+            <li>3 Pago</li>
+          </ol>
+          <h1 class="h" style="--fs: clamp(48px, 7vw, 80px); margin-bottom: 32px">Tu carrito</h1>
+          <div class="two">
+            <div id="cl"></div>
+            <aside class="card sm" id="cs"></aside>
+          </div>
+        </div>
+      </section>
+      <section data-v="resumen">
+        <div class="wrap" style="padding-top: 48px; padding-bottom: 96px">
+          <ol class="stp">
+            <li>1 Carrito</li>
+            <li>—</li>
+            <li class="on">2 Resumen</li>
+            <li>—</li>
+            <li>3 Pago</li>
+          </ol>
+          <h1 class="h" style="--fs: clamp(48px, 7vw, 80px); margin-bottom: 32px">
+            Resumen de compra
+          </h1>
+          <div class="two">
+            <div>
+              <div class="card bd" id="rl" style="margin-bottom: 24px"></div>
+              <form class="card bd fi" id="fr">
+                <div class="k">TUS DATOS</div>
+                <label>Nombre<input type="text" required placeholder="Tu nombre completo" /></label
+                ><label
+                  >Correo electrónico<input
+                    type="email"
+                    required
+                    placeholder="tucorreo@ejemplo.com"
+                /></label>
+              </form>
+            </div>
+            <aside class="card sm" id="rs"></aside>
+          </div>
+        </div>
+      </section>
+      <section data-v="completada">
+        <div class="ok">
+          <div class="cf" id="cf"></div>
+          <div class="cb">
+            <svg width="56" height="56" viewBox="0 0 56 56"><path d="M12 29l12 12 20-24" /></svg>
+          </div>
+          <div class="k">PAGO CONFIRMADO</div>
+          <h1 class="h up" style="--fs: clamp(56px, 10vw, 112px)">Compra completada</h1>
+          <p class="mu">
+            Tu prueba gratuita de 7 días ya está activa. Revisa tu correo para empezar.
+          </p>
+          <div class="card sm" id="oo" style="position: static; width: min(520px, 92vw)"></div>
+          <div class="row" style="justify-content: center">
+            <a class="btn" href="#catalogo" data-sp="all">Explorar el catálogo</a
+            ><a class="btn o" href="#home">Volver al inicio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap ft">
+        <div>
+          <span class="lg">PADDOCK <span class="r">FC</span></span>
+          <p style="max-width: 320px">
+            Análisis de fútbol y Fórmula 1 para aficionados que quieren entender el juego.
+          </p>
+        </div>
+        <div>
+          <b class="k">PLATAFORMA</b><a href="#catalogo" data-sp="all">Catálogo</a
+          ><a href="#planes">Planes</a><a href="#faq">Preguntas frecuentes</a>
+        </div>
+        <div>
+          <b class="k">CUENTA</b><a href="#registro">Registro</a><a href="#acceso">Iniciar sesión</a
+          ><a href="#carrito">Carrito</a>
+        </div>
+        <div>
+          <p style="max-width: 300px">
+            © 2026 Paddock FC · Prototipo académico. Marca propia, sin vínculo con F1, FIFA ni
+            clubes. Hecho para Venezuela.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <button class="totop" aria-label="Volver arriba" type="button">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2">
+        <path d="M3 10l5-5 5 5" />
+      </svg>
+    </button>
+    <div id="ov2" data-close></div>
+    <aside id="dr" aria-label="Carrito de compras"></aside>
+    <div id="toast" role="status">
+      <i
+        ><svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path
+            d="M2 6.5L5 9.5L10 3"
+            stroke="#0D0D10"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+      ></i>
+      <div><b id="tt"></b><br /><span class="mu" id="ts"></span></div>
+      <a class="r" href="#carrito" style="font-weight: 700">Ver carrito</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
